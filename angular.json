@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "learn-with-new-app"
+    }
+  },
+  "defaultProject": "learn-with-new-app",
+  "cli": {
+    "analytics": false
+  }
 }
