@@ -8,4 +8,21 @@ import {Component} from "@angular/core"
 export class ServerComponent{
    ServerID:number = 11;
    ServerStatus : string = "Offline";
+    serverName : string ="";
+
+
+   constructor (){
+    this.ServerStatus = Math.random() > 0.5 ? "online" : "offline";
+    
+   }
+
+   //
+
+   ngOnInit(): void {
+    //this.serverName = this.serverN;
+}
+   GetColor()
+   {
+       return this.ServerStatus === "online"? "green" : "red";
+   }
 }

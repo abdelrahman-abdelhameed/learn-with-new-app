@@ -1,5 +1,30 @@
 
 
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+          <label>
+              server Name
+          </label>
+          <input class="form-control" [(ngModel)]='ServerName' >
+        </div>
+        <div class="col-xl-12">
+           <button class="btn btn-primary" (click) = 'inputChange()'>
+               add server 
+           </button>
+           <p *ngIf="ServerCreated ; else noServer">
+               {{ServerName}}
+           </p>
+           <ng-template #noServer>
+            <p>
+                {{CreatedServer}}
+            </p>
+           </ng-template>
+          
+        </div>
+    </div>
+</div>
 
- <app-Server></app-Server>
- <app-Server></app-Server>
+
+ <app-Server *ngFor="let server of servers"></app-Server>
+ 

@@ -8,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   constructor() { }
-
+  ServerName:string = "";
+  CreatedServer : string ="NO server added";
+  ServerCreated : boolean = false;
+  servers = ["server 1" , "server 2"];
   ngOnInit(): void {
   }
 
+
+  inputChange()
+  {
+    this.ServerCreated = true;
+    this.CreatedServer = this.ServerName;
+    this.servers.push(this.ServerName);
+  }
 }
